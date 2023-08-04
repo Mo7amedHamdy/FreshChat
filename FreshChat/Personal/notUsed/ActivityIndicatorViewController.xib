@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityIndicatorViewController" customModule="FreshChat" customModuleProvider="target">
+            <connections>
+                <outlet property="Activity" destination="XHd-1G-vie" id="Het-Nm-Z6l"/>
+                <outlet property="backView" destination="GSU-f6-jlx" id="XPs-mH-qxs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSU-f6-jlx" userLabel="backView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XHd-1G-vie">
+                    <rect key="frame" x="151.66666666666666" y="381" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="Riq-BQ-Ptk"/>
+                        <constraint firstAttribute="height" constant="90" id="jrk-bS-Xe6"/>
+                    </constraints>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="XHd-1G-vie" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GQV-Zx-6vt"/>
+                <constraint firstItem="XHd-1G-vie" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="OdQ-3e-EkV"/>
+                <constraint firstItem="GSU-f6-jlx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lNu-GT-xpp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GSU-f6-jlx" secondAttribute="trailing" id="mma-bV-fJB"/>
+                <constraint firstAttribute="bottom" secondItem="GSU-f6-jlx" secondAttribute="bottom" id="ojx-Ix-T4i"/>
+                <constraint firstItem="GSU-f6-jlx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uEC-bY-Dui"/>
+            </constraints>
+            <point key="canvasLocation" x="-66" y="20"/>
+        </view>
+    </objects>
+</document>

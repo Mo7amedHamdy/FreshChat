@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pNE" rowHeight="50" id="7Xv-30-gm2" customClass="ProfileNameEditTableViewCell" customModule="FreshChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Xv-30-gm2" id="y6Z-qE-9in">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bo-jl-99I">
+                        <rect key="frame" x="20" y="0.0" width="363" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="rol-iB-XvH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4Bo-jl-99I" secondAttribute="bottom" id="9Wi-JO-FMD"/>
+                    <constraint firstItem="4Bo-jl-99I" firstAttribute="leading" secondItem="y6Z-qE-9in" secondAttribute="leading" constant="20" id="GYn-KM-1zy"/>
+                    <constraint firstAttribute="trailing" secondItem="4Bo-jl-99I" secondAttribute="trailing" constant="10" id="RN8-a2-drv"/>
+                    <constraint firstItem="4Bo-jl-99I" firstAttribute="top" secondItem="y6Z-qE-9in" secondAttribute="top" id="oKN-nQ-77i"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameTextField" destination="4Bo-jl-99I" id="dTX-Fn-Yqp"/>
+            </connections>
+            <point key="canvasLocation" x="107.63358778625954" y="-61.971830985915496"/>
+        </tableViewCell>
+    </objects>
+</document>

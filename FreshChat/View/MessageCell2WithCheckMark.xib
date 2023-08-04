@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell2WithCheckMark" rowHeight="72" id="KGk-i7-Jjw" userLabel="MessageCell" customClass="MessageCell" customModule="FreshChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="387" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="387" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7ZL-aR-ZsW">
+                        <rect key="frame" x="6" y="1" width="375" height="61"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8e-hD-kF1" customClass="ChatBubble" customModule="FreshChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3i-Me-c5y">
+                                        <rect key="frame" x="232" y="6" width="23" height="27"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="hi !">
+                                                <attributes>
+                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufu-Ce-l72">
+                                        <rect key="frame" x="209.5" y="36" width="28.5" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="zV9-Sk-oW2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.3878879677" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ap3-1k-Oqu">
+                                        <rect key="frame" x="243" y="39.5" width="10" height="13.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="mrO-5G-AHf"/>
+                                        </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MdX-KE-cjM">
+                                        <rect key="frame" x="250" y="39.5" width="10" height="13.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="EgE-2C-rPN"/>
+                                        </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="L3i-Me-c5y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l8e-hD-kF1" secondAttribute="leading" constant="25" id="4Oa-9z-Din"/>
+                                    <constraint firstAttribute="trailing" secondItem="MdX-KE-cjM" secondAttribute="trailing" constant="20" id="5E8-m2-gAD"/>
+                                    <constraint firstAttribute="bottom" secondItem="MdX-KE-cjM" secondAttribute="bottom" constant="5" id="BxC-c6-aGl"/>
+                                    <constraint firstItem="L3i-Me-c5y" firstAttribute="top" secondItem="l8e-hD-kF1" secondAttribute="top" constant="6" id="NDN-XE-bnc"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="340" id="O5j-sf-jNc"/>
+                                    <constraint firstAttribute="trailing" secondItem="L3i-Me-c5y" secondAttribute="trailing" constant="25" id="QY2-Wo-6Y3"/>
+                                    <constraint firstItem="Ap3-1k-Oqu" firstAttribute="top" secondItem="L3i-Me-c5y" secondAttribute="bottom" constant="3" id="a5o-iJ-w2R"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="bYH-U8-DRc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ap3-1k-Oqu" secondAttribute="bottom" constant="5" id="eyL-cw-2rU"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ufu-Ce-l72" secondAttribute="bottom" constant="5" id="gMG-Yi-duF"/>
+                                    <constraint firstItem="Ufu-Ce-l72" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l8e-hD-kF1" secondAttribute="leading" constant="40" id="iLz-oe-qUF"/>
+                                    <constraint firstItem="MdX-KE-cjM" firstAttribute="top" secondItem="L3i-Me-c5y" secondAttribute="bottom" constant="3" id="mOY-7m-LEJ"/>
+                                    <constraint firstItem="Ap3-1k-Oqu" firstAttribute="leading" secondItem="Ufu-Ce-l72" secondAttribute="trailing" constant="5" id="q3c-AY-dJT"/>
+                                    <constraint firstItem="MdX-KE-cjM" firstAttribute="leading" secondItem="Ap3-1k-Oqu" secondAttribute="trailing" constant="-3" id="qz4-oI-25X"/>
+                                    <constraint firstItem="Ufu-Ce-l72" firstAttribute="top" secondItem="L3i-Me-c5y" secondAttribute="bottom" constant="3" id="yoa-b7-JG6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="7ZL-aR-ZsW" secondAttribute="trailing" constant="6" id="9O2-zp-q9Z"/>
+                    <constraint firstAttribute="bottom" secondItem="7ZL-aR-ZsW" secondAttribute="bottom" constant="10" id="KrV-sf-IYV"/>
+                    <constraint firstItem="7ZL-aR-ZsW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="Nnx-fv-dX2"/>
+                    <constraint firstItem="7ZL-aR-ZsW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="dek-B5-Hxl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageViewCheckMark" destination="Ap3-1k-Oqu" id="F7G-qq-beR"/>
+                <outlet property="imageViewCheckMark2" destination="MdX-KE-cjM" id="004-YY-esv"/>
+                <outlet property="messageBubbleStack" destination="7ZL-aR-ZsW" id="5Sv-kY-FeI"/>
+                <outlet property="messageBubbleView" destination="l8e-hD-kF1" id="8Ms-fU-B8Z"/>
+                <outlet property="messageLabel" destination="L3i-Me-c5y" id="bFg-Go-c0a"/>
+                <outlet property="messageTimeLabel" destination="Ufu-Ce-l72" id="0iA-hK-6zg"/>
+            </connections>
+            <point key="canvasLocation" x="-154.34782608695653" y="-304.01785714285711"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
