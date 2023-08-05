@@ -36,10 +36,11 @@ extension ChatsViewController: UITableViewDelegate, UITableViewDataSource {
         let lastMessageTimeInterval = room.lastMessageTime
         let lastMessageTimeString = configureDateFormat(lastMessageTimeInterval)
         cell.timeLabel.text = lastMessageTimeString
+        
         //last message state
         if room.senderLastMessage != room.otherUserEmial && room.messageState != nil {
             cell.lastMessageLabel.text = lastMessage
-            cell.lastMessageLabel.decideTextDirection() //TODO handle this when message is empty
+            cell.lastMessageLabel.decideTextDirection()
             let state = room.messageState
             if state == "sent" { //TODO this with enum and switch cases
                 cell.configureSentCheck()
@@ -177,57 +178,4 @@ extension ChatsViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-}
-
-
-//MARK: - functions not used
-extension ChatsViewController {
-    
-    //left bar button item menu
-//    func leftBarButtonItemMenu() -> UIMenu {
-//        let action1 = UIAction(title: "Sign Out", image: UIImage(systemName: "rectangle.portrait.and.arrow.right"), attributes: .destructive) { action in
-//            let vc = ActivityIndicatorViewController()
-//            self.present(vc, animated: false)
-//
-//            let dispatchWork = DispatchWorkItem {
-//                try! Auth.auth().signOut()
-//                self.dismiss(animated: false){
-//                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome")
-//                    vc.modalPresentationStyle = .fullScreen
-//                    self.present(vc, animated: false)
-//                }
-//            }
-//            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: dispatchWork)
-//
-//        }
-//        let barButtonMenu = UIMenu(title: "", children: [action1])
-//
-//        return barButtonMenu
-//    }
-    
-    //left bar button item
-//    @IBAction func didPressLeftBarButton(_ sender: Any) {
-//
-//        let vc = PersonalCollectionViewController { isCompleted in
-//            //configure custom alert
-//
-//            let vc = ActivityIndicatorViewController()
-//            self.present(vc, animated: false)
-//
-//            let dispatchWork = DispatchWorkItem {
-//                try! Auth.auth().signOut()
-//                self.dismiss(animated: false){
-//                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome")
-//                    vc.modalPresentationStyle = .fullScreen
-//                    self.present(vc, animated: false)
-//                }
-//            }
-//            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: dispatchWork)
-//
-//        }
-//        let navController = UINavigationController(rootViewController: vc)
-//        navController.navigationBar.topItem?.title = "Personal Control"
-//        navController.modalPresentationStyle = .popover
-//        present(navController, animated: true)
-//    }
 }

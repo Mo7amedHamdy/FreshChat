@@ -26,9 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         db = Firestore.firestore()
-        
-//        settings.isPersistenceEnabled = false
-//        db.settings = settings
 
         let center = UNUserNotificationCenter.current()
         center.delegate = self
@@ -50,7 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // MARK: UISceneSession Lifecycle
-
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
@@ -109,97 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    //for background notifications to update app with new data at background
-//    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-//        print(userInfo)
-//
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        guard let vc = storyboard.instantiateViewController(identifier: "messages") as? UserMessagesViewController else { return }
-//        guard let firstName = userInfo["firstName"] as? String else { return }
-//        guard let lastName = userInfo["lastName"] as? String else { return }
-//        guard let email = userInfo["email"] as? String else { return }
-//        guard let profilePicString = userInfo["profilePicture"] as? String else { return }
-//        guard let chatRoomId = userInfo["chatRoomId"] as? String else { return }
-//        guard let messageId = userInfo["messageId"] as? String else { return }
-////        guard let sendTime = userInfo["sendTime"] as? String else { return }
-//
-//
-//        let otherUser = User(email: email, firstName: firstName, lastName: lastName, profilePictureString: profilePicString)
-//        vc.otherUser = otherUser
-//        vc.chatRoomDocumentID = chatRoomId
-//        vc.isPushingBackgroundNotificationToApp = true
-//        guard let userInfoAps = userInfo["aps"] as? [String: Any],
-//        let userInfoAlert = userInfoAps["alert"] as? [String: Any],
-//        let body = userInfoAlert["body"] as? String else {
-//            return
-//        }
-//        print(body)
-//
-//        print("00000000000000000")
-//
-//        //data from notification
-//        let pref = UserDefaults.init(suiteName: "group.mohamed.FreshChat")
-//        guard let dataNot = pref?.value(forKey: "notification") as? [[String: String]] else {return}
-//        print("data notification count: \(dataNot.count)")
-//        var dataNot2 = [[String:String]]()
-//
-//        print("11111111111111111111")
-//
-////        functions.httpsCallable("deliveredMessage").call(["messageId": messageId]) { result, error in
-////            if let error2 = error {
-////                print("error is: \(error2.localizedDescription)")
-////            }
-////            else {
-////                print("successfully !")
-////            }
-////        }
-//
-//        //query in firestore to fetch documents it's message state is sent only
-//        let query = db.collection("conversations").document(chatRoomId).collection("messages_\(email)").whereField("messageStatus", isEqualTo: "sent") //if you wanna use order here you should use the same paramter in whereField
-//        query.getDocuments(source: .server) { snapshot, error in
-//            if let error2 = error {
-//                print(error2.localizedDescription)
-//            }
-//            else {
-//                guard let snap = snapshot else {return}
-//                let docs = snap.documents
-//                print("222222222222222222")
-//                //phone reconnect with net (from disconnect mode)
-//                if docs.count > 1 {
-//                    print("33333333333333333333")
-//                    for dat in dataNot {
-//                        for doc in docs {
-//                            let data = doc.data()
-//                            guard let messageId2 = data["messageId"] as? String else {return}
-//                            guard let messageBody = data["body"] as? String else {return}
-//                            guard let messageSendTime = data["sendTime"] as? TimeInterval else {return}  //time is interval not string
-//
-//                            self.db.collection("conversations").document(chatRoomId).collection("messages_\(email)").document(messageId2).updateData(["messageStatus": "delivered"])
-//
-//                            if dat["messageId"] == messageId2 {
-//                                dataNot2.insert(dat, at: 0)
-//                            }else {
-//                                let datNew = ["messageId": messageId2, "body": messageBody, "sendTime": "\(messageSendTime)"]
-//                                dataNot2.append(datNew)
-//                            }
-//                        }
-//                    }
-//                    print("data notification count00: \(dataNot.count)")
-//                    pref?.set(dataNot2, forKey: "notification")
-//                }
-//
-//                //phone connected to net
-//                else if docs.count == 1 {
-//                    print("444444444444444444")
-//                    self.db.collection("conversations").document(chatRoomId).collection("messages_\(email)").document(messageId).updateData(["messageStatus": "delivered"])
-//                }
-//
-//            }
-//        }
-//
-//        completionHandler(.newData)
-//    }
-    
+    //MARK: - get notification data
     
     //get delivered messages count for current user (receiver notification)
     func getDeliveredMessagesCountForCurrentUser(roomId: String, completion: @escaping (Int)->Void) {
@@ -293,23 +199,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-//MARK: - user notification
+//MARK: - handle user notifications
+
 extension AppDelegate: UNUserNotificationCenterDelegate {
-    
-    //handle notification when app in foreground
-    //    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-    //        let userInfo = notification.request.content.userInfo
-    //        print("user info: \(userInfo)")
-    //        return [[.sound]]
-    //    }
-    
-    //handle users action with notification
-//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
-//        let userInfo = response.notification.request.content.userInfo
-//        print("user info 2: \(userInfo)")
-//        UIApplication.shared.applicationIconBadgeNumber = 0
-//    }
-    
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         guard let userInfo = response.notification.request.content.userInfo as? [String: Any] else { return }
         coordinateToUserMessagesVC(userInfo: userInfo)

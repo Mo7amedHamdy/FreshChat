@@ -12,7 +12,7 @@ import FirebaseFirestore
 extension ChatsViewController {
     
     //fetch chat rooms with listener2
-    func fetchchatRoomsWithListener2() {
+    func fetchchatRoomsWithListener() {
         guard let currentUserEmail = Auth.auth().currentUser?.email else { return }
         chatRoomslistener = db.collection("users").document(currentUserEmail).collection("chatRooms").order(by: "lastMessageSendTime", descending: true).addSnapshotListener { querySnapshot, error in
 //            self.rooms = []

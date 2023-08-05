@@ -15,14 +15,11 @@
 		603213D328F09B4B005AB870 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603213D228F09B4B005AB870 /* RegisterViewController.swift */; };
 		60391B882900A9E6002273FA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60391B872900A9E6002273FA /* User.swift */; };
 		603ECCB4295B757900265961 /* UrlCachedImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603ECCB3295B757900265961 /* UrlCachedImages.swift */; };
-		603F66CD293639C100CF7F20 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F66CB293639C100CF7F20 /* ActivityIndicatorViewController.swift */; };
-		603F66CE293639C100CF7F20 /* ActivityIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603F66CC293639C100CF7F20 /* ActivityIndicatorViewController.xib */; };
 		6042A55329749C0F00866579 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6042A55229749C0F00866579 /* CustomHeader.swift */; };
 		6044188428C78456009489F5 /* InputTest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044188328C78456009489F5 /* InputTest.xib */; };
 		6044188628C784C0009489F5 /* InputTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044188528C784C0009489F5 /* InputTest.swift */; };
 		6044A3D829002885004C278E /* ChatRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6044A3D729002885004C278E /* ChatRoomCell.xib */; };
 		6044A3DA290028C3004C278E /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044A3D9290028C3004C278E /* ChatRoomCell.swift */; };
-		604875A9293209E40006452A /* PersonalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604875A8293209E40006452A /* PersonalCollectionViewController.swift */; };
 		60488F32296AE6D800C98B0A /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60488F31296AE6D800C98B0A /* Date+Today.swift */; };
 		604B4BFB292A2B0D00019156 /* SettingsCollectionViewController+Sections+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B4BFA292A2B0D00019156 /* SettingsCollectionViewController+Sections+Items.swift */; };
 		604B89F82907B8D40000664C /* UserMessagesTableViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604B89F72907B8D40000664C /* UserMessagesTableViewEx.swift */; };
@@ -42,9 +39,6 @@
 		6062C05C2A61FA7A00855A71 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 6062C05B2A61FA7A00855A71 /* FirebaseFunctions */; };
 		6062C05E2A61FA8800855A71 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 6062C05D2A61FA8800855A71 /* FirebaseFunctions */; };
 		60637DF42A4D7543003F9B06 /* PersonalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60637DF32A4D7543003F9B06 /* PersonalInformation.swift */; };
-		60637DF62A4DA286003F9B06 /* ProfilePictureContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60637DF52A4DA286003F9B06 /* ProfilePictureContentView.swift */; };
-		60637DF82A4DA2A5003F9B06 /* FullNameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60637DF72A4DA2A5003F9B06 /* FullNameContentView.swift */; };
-		6068CADB293268EF0098B976 /* PersonalCollectionViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068CADA293268EF0098B976 /* PersonalCollectionViewController+DataSource.swift */; };
 		6068FA832966D0AD00F3F501 /* SettingsCollectionViewControllerEx+RowConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068FA822966D0AD00F3F501 /* SettingsCollectionViewControllerEx+RowConfiguration.swift */; };
 		6068FA852966E37B00F3F501 /* PersonalInfoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068FA842966E37B00F3F501 /* PersonalInfoContentView.swift */; };
 		6068FA892967752500F3F501 /* UIView+PinnedSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068FA882967752500F3F501 /* UIView+PinnedSubView.swift */; };
@@ -63,8 +57,6 @@
 		608C4EAE2910551D0095957E /* UsersMailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608C4EAD2910551D0095957E /* UsersMailCell.xib */; };
 		608C4EB0291055450095957E /* UsersMailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608C4EAF291055450095957E /* UsersMailCell.swift */; };
 		6093FC1229C27ED800387BD7 /* CustomDeleteToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6093FC1129C27ED800387BD7 /* CustomDeleteToolbar.swift */; };
-		609AF80B2A4A334C0091C90A /* EditPersonalInfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609AF80A2A4A334C0091C90A /* EditPersonalInfoCollectionViewController.swift */; };
-		609AF80D2A4A363F0091C90A /* EditPersonalInfoCollectionViewControllerEX+Sections+Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609AF80C2A4A363F0091C90A /* EditPersonalInfoCollectionViewControllerEX+Sections+Items.swift */; };
 		609D8841289048A9003217AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 609D8840289048A9003217AB /* GoogleService-Info.plist */; };
 		609D8844289052C8003217AB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 609D8843289052C8003217AB /* FirebaseAuth */; };
 		609D8846289052C8003217AB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 609D8845289052C8003217AB /* FirebaseFirestore */; };
@@ -129,14 +121,11 @@
 		603213D228F09B4B005AB870 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		60391B872900A9E6002273FA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		603ECCB3295B757900265961 /* UrlCachedImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlCachedImages.swift; sourceTree = "<group>"; };
-		603F66CB293639C100CF7F20 /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
-		603F66CC293639C100CF7F20 /* ActivityIndicatorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorViewController.xib; sourceTree = "<group>"; };
 		6042A55229749C0F00866579 /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 		6044188328C78456009489F5 /* InputTest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputTest.xib; sourceTree = "<group>"; };
 		6044188528C784C0009489F5 /* InputTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTest.swift; sourceTree = "<group>"; };
 		6044A3D729002885004C278E /* ChatRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomCell.xib; sourceTree = "<group>"; };
 		6044A3D9290028C3004C278E /* ChatRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
-		604875A8293209E40006452A /* PersonalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCollectionViewController.swift; sourceTree = "<group>"; };
 		60488F31296AE6D800C98B0A /* Date+Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
 		604B4BFA292A2B0D00019156 /* SettingsCollectionViewController+Sections+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsCollectionViewController+Sections+Items.swift"; sourceTree = "<group>"; };
 		604B89F72907B8D40000664C /* UserMessagesTableViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessagesTableViewEx.swift; sourceTree = "<group>"; };
@@ -154,9 +143,6 @@
 		6057A96829C3BEBE005F5E0F /* UserMessagesViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMessagesViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		605CE55F2904172500AB1A83 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		60637DF32A4D7543003F9B06 /* PersonalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformation.swift; sourceTree = "<group>"; };
-		60637DF52A4DA286003F9B06 /* ProfilePictureContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureContentView.swift; sourceTree = "<group>"; };
-		60637DF72A4DA2A5003F9B06 /* FullNameContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameContentView.swift; sourceTree = "<group>"; };
-		6068CADA293268EF0098B976 /* PersonalCollectionViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalCollectionViewController+DataSource.swift"; sourceTree = "<group>"; };
 		6068FA822966D0AD00F3F501 /* SettingsCollectionViewControllerEx+RowConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsCollectionViewControllerEx+RowConfiguration.swift"; sourceTree = "<group>"; };
 		6068FA842966E37B00F3F501 /* PersonalInfoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoContentView.swift; sourceTree = "<group>"; };
 		6068FA882967752500F3F501 /* UIView+PinnedSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubView.swift"; sourceTree = "<group>"; };
@@ -176,8 +162,6 @@
 		608C4EAD2910551D0095957E /* UsersMailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersMailCell.xib; sourceTree = "<group>"; };
 		608C4EAF291055450095957E /* UsersMailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMailCell.swift; sourceTree = "<group>"; };
 		6093FC1129C27ED800387BD7 /* CustomDeleteToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDeleteToolbar.swift; sourceTree = "<group>"; };
-		609AF80A2A4A334C0091C90A /* EditPersonalInfoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonalInfoCollectionViewController.swift; sourceTree = "<group>"; };
-		609AF80C2A4A363F0091C90A /* EditPersonalInfoCollectionViewControllerEX+Sections+Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditPersonalInfoCollectionViewControllerEX+Sections+Items.swift"; sourceTree = "<group>"; };
 		609D8840289048A9003217AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		60A22AD628911A1300E955B9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		60A22AD82891276800E955B9 /* UserMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessagesViewController.swift; sourceTree = "<group>"; };
@@ -294,25 +278,6 @@
 			path = NotificationServiceExtension;
 			sourceTree = "<group>";
 		};
-		604875AA293209F40006452A /* Personal */ = {
-			isa = PBXGroup;
-			children = (
-				60496C5E293BC5D3006391CD /* notUsed */,
-			);
-			path = Personal;
-			sourceTree = "<group>";
-		};
-		60496C5E293BC5D3006391CD /* notUsed */ = {
-			isa = PBXGroup;
-			children = (
-				604875A8293209E40006452A /* PersonalCollectionViewController.swift */,
-				6068CADA293268EF0098B976 /* PersonalCollectionViewController+DataSource.swift */,
-				603F66CB293639C100CF7F20 /* ActivityIndicatorViewController.swift */,
-				603F66CC293639C100CF7F20 /* ActivityIndicatorViewController.xib */,
-			);
-			path = notUsed;
-			sourceTree = "<group>";
-		};
 		604B89F62907B87E0000664C /* UserMessagesTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,7 +346,6 @@
 				60010C3128928AAC0077A3FD /* View */,
 				60010C3028928AA20077A3FD /* Controller */,
 				6087A80229268F3B00FFCFAF /* Settings */,
-				604875AA293209F40006452A /* Personal */,
 				6069D13928903DF000DE3848 /* Assets.xcassets */,
 				6069D13B28903DF000DE3848 /* LaunchScreen.storyboard */,
 				6069D13E28903DF000DE3848 /* Info.plist */,
@@ -408,7 +372,6 @@
 		609AF8092A4A32B50091C90A /* Edit Personal Info */ = {
 			isa = PBXGroup;
 			children = (
-				60BD209C2A5015D4001D7CE8 /* Legacy */,
 				60DEF7A82A4EF08800A216F3 /* EditPersonalInfoTableViewController.swift */,
 				60BD20A32A506E09001D7CE8 /* MoveAndScaleProfilePicViewController.swift */,
 				60BD209D2A506AF5001D7CE8 /* PresentTransition.swift */,
@@ -423,17 +386,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		60BD209C2A5015D4001D7CE8 /* Legacy */ = {
-			isa = PBXGroup;
-			children = (
-				609AF80A2A4A334C0091C90A /* EditPersonalInfoCollectionViewController.swift */,
-				609AF80C2A4A363F0091C90A /* EditPersonalInfoCollectionViewControllerEX+Sections+Items.swift */,
-				60637DF52A4DA286003F9B06 /* ProfilePictureContentView.swift */,
-				60637DF72A4DA2A5003F9B06 /* FullNameContentView.swift */,
-			);
-			path = Legacy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,7 +504,6 @@
 				604CAA6E298AD20400EE1FC2 /* MessageCell2.xib in Resources */,
 				609D8841289048A9003217AB /* GoogleService-Info.plist in Resources */,
 				60B332552A5C0A37008131B2 /* MessageCellWithCheckMark.xib in Resources */,
-				603F66CE293639C100CF7F20 /* ActivityIndicatorViewController.xib in Resources */,
 				6069D13A28903DF000DE3848 /* Assets.xcassets in Resources */,
 				6044188428C78456009489F5 /* InputTest.xib in Resources */,
 				6069D13528903DEF00DE3848 /* Main.storyboard in Resources */,
@@ -578,8 +529,6 @@
 			files = (
 				6068FA832966D0AD00F3F501 /* SettingsCollectionViewControllerEx+RowConfiguration.swift in Sources */,
 				60A22AD728911A1300E955B9 /* SignInViewController.swift in Sources */,
-				609AF80B2A4A334C0091C90A /* EditPersonalInfoCollectionViewController.swift in Sources */,
-				6068CADB293268EF0098B976 /* PersonalCollectionViewController+DataSource.swift in Sources */,
 				604B89FA2907B9530000664C /* UserMessagesForSendButtonEx.swift in Sources */,
 				6079AB602A52BE5C00D87BC6 /* EmptyTableViewCell.swift in Sources */,
 				60391B882900A9E6002273FA /* User.swift in Sources */,
@@ -592,26 +541,21 @@
 				606E01BC2897C6D80096313F /* ChatBubble.swift in Sources */,
 				60CDCD2E29C1DD0A009ABDEB /* UserMessagesViewController+ContextMenuInteraction.swift in Sources */,
 				608321D52A75084D0092EB1C /* ChatsViewController+FetchRooms.swift in Sources */,
-				604875A9293209E40006452A /* PersonalCollectionViewController.swift in Sources */,
 				6044A3DA290028C3004C278E /* ChatRoomCell.swift in Sources */,
 				60B41A74292B992700E86145 /* SettingsItems.swift in Sources */,
 				605CE5602904172500AB1A83 /* ChatRoom.swift in Sources */,
 				60DEF7AD2A4EF14D00A216F3 /* ProfilePicEditTableViewCell.swift in Sources */,
 				6068FA892967752500F3F501 /* UIView+PinnedSubView.swift in Sources */,
 				60DEF7B12A4EF19B00A216F3 /* ProfileNameEditTableViewCell.swift in Sources */,
-				609AF80D2A4A363F0091C90A /* EditPersonalInfoCollectionViewControllerEX+Sections+Items.swift in Sources */,
 				60A22AD92891276800E955B9 /* UserMessagesViewController.swift in Sources */,
 				60010C372892CFA50077A3FD /* MessageCell.swift in Sources */,
 				604B8A0329082C570000664C /* NavbarCustomItem.swift in Sources */,
-				603F66CD293639C100CF7F20 /* ActivityIndicatorViewController.swift in Sources */,
 				6057A96929C3BEBE005F5E0F /* UserMessagesViewController+Keyboard.swift in Sources */,
 				603ECCB4295B757900265961 /* UrlCachedImages.swift in Sources */,
 				6044188628C784C0009489F5 /* InputTest.swift in Sources */,
 				6056801F298E845D00B8E4F4 /* UserMessagesViewController+FetchMessages.swift in Sources */,
-				60637DF62A4DA286003F9B06 /* ProfilePictureContentView.swift in Sources */,
 				6069D12E28903DEF00DE3848 /* AppDelegate.swift in Sources */,
 				60010C3428928B0D0077A3FD /* Message.swift in Sources */,
-				60637DF82A4DA2A5003F9B06 /* FullNameContentView.swift in Sources */,
 				60BD209E2A506AF5001D7CE8 /* PresentTransition.swift in Sources */,
 				6069D13828903DEF00DE3848 /* FreshChat.xcdatamodeld in Sources */,
 				604B89FC2907B9A70000664C /* UserMessagesForTextViewDelEx.swift in Sources */,

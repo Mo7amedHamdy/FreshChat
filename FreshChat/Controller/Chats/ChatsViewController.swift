@@ -44,9 +44,7 @@ class ChatsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        //handle this with clousers to get chat rooms after signing in ??
-        
+                        
         if Auth.auth().currentUser == nil {
             //open login controller
             let welcomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome")
@@ -58,14 +56,13 @@ class ChatsViewController: UIViewController {
         chatsTableView.delegate = self
         chatsTableView.dataSource = self
         
-        fetchchatRoomsWithListener2()
+        fetchchatRoomsWithListener()
         
     }
     
     //Mark:- view will appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        fetchchatRoomsWithListener()
         if currentUser == nil {
             fetchCurrentUserData()
         }
@@ -81,10 +78,9 @@ class ChatsViewController: UIViewController {
         if otherUsersData.isEmpty {
             loadUsers()
         }
-        
         //in case new sign in
         if chatRoomslistener == nil {
-            fetchchatRoomsWithListener2()
+            fetchchatRoomsWithListener()
             chatsTableView.reloadData()
         }
         
@@ -93,6 +89,7 @@ class ChatsViewController: UIViewController {
         db.collection("users").document(currentUserEmail).updateData(["state": "online",
                                                                       "stateTime": Date().timeIntervalSince(.now)])
         
+        //update room last message when delete message in user messages view controller
         if self.newRoom != nil {
             updateChatRoomForDeleteMesages()
         }
@@ -190,7 +187,6 @@ class ChatsViewController: UIViewController {
         if currentUser != nil {
             currentUserListener.remove()
         }
-//        chatRoomslistener.remove()
     }
     
     
@@ -242,12 +238,6 @@ class ChatsViewController: UIViewController {
                     return
                 }
             }
-            
-//            let room = ChatRoom(id: "", lastMessage: "", otherUserEmial: newUser.email, otherUserFirstName: newUser.firstName, otherUserLastName: newUser.lastName,otherUserProfilePicture: newUser.profilePicture, otherUserProfilePictureString: newUser.profilePictureString)
-//            self.rooms.append(room)
-//            DispatchQueue.main.async {
-//                self.chatsTableView.reloadData()
-//            }
             let work = DispatchWorkItem {
                 let vcNewUserMessages = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "messages") as! UserMessagesViewController
                 vcNewUserMessages.otherUser = newUser
@@ -266,6 +256,7 @@ class ChatsViewController: UIViewController {
     //load users
     var otherUsersData = [User]()
     func loadUsers() {
+        
         //TODO search bar to search about user to chat with by email
         
         userslistener = db.collection("users").order(by: "firstName", descending: false).addSnapshotListener({ querysnapshot, error in
@@ -354,38 +345,3 @@ class ChatsViewController: UIViewController {
     }
 }
 
-
-//MARK: - preservation and restoration state
-//extension ChatsViewController {
-//
-//    private static let restoreRoomsKey = "restoreRooms"
-//
-//    override func encodeRestorableState(with coder: NSCoder) {
-//        super.encodeRestorableState(with: coder)
-//        coder.encode(rooms, forKey: ChatsViewController.restoreRoomsKey)
-//    }
-//
-//    override func decodeRestorableState(with coder: NSCoder) {
-//        super.decodeRestorableState(with: coder)
-//
-//        guard let decodedrooms =
-//            coder.decodeObject(forKey: ChatsViewController.restoreRoomsKey) as? [ChatRoom] else {
-//            fatalError("A product did not exist in the restore. In your app, handle this gracefully.")
-//        }
-//        self.rooms = decodedrooms
-//    }
-//
-//}
-
-
-
-//MARK: - extension
-extension ChatsViewController: TransRooms {
-    func transfereRooms(rooms: [ChatRoom]) {
-        print("new rooms are comming")
-//        self.rooms = rooms
-//        self.chatsTableView.reloadData()
-    }
-    
-    
-}
