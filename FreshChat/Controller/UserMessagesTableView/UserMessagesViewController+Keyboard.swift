@@ -18,16 +18,24 @@ extension UserMessagesViewController {
 //            let contentInset = UIEdgeInsets(top: 0, left: 0, bottom:(keyboardHeight - view.safeAreaInsets.bottom) + 5, right: 0)
             //for reversed table...
             if !isScroll {
-                let contentInset = UIEdgeInsets(top: (keyboardHeight - view.safeAreaInsets.bottom) + 5, left: 0, bottom: 0, right: 0)
-                self.chatTable.contentInset = contentInset
-                self.chatTable.verticalScrollIndicatorInsets = contentInset
+                UIView.animate(withDuration: 0.2) {
+                    print("keyboard will show 88888888999999999")
+                    let contentInset = UIEdgeInsets(top: (self.keyboardHeight - self.view.safeAreaInsets.bottom) + 5, left: 0, bottom: 0, right: 0)
+                    self.chatTable.contentInset = contentInset
+                    self.chatTable.verticalScrollIndicatorInsets = contentInset
+                    self.view.layer.setNeedsLayout()  //why this here ??
+                }
             }
             //first show for keyboard
             if  keyboardHeight > 200 && isChangingFrame == false {
                 //for reversed table .. you should care that content offset y is minus
 //                self.chatTable.contentOffset.y = ((self.chatTable.contentOffset.y - keyboardHeight) + (messageInputView.frame.height + view.safeAreaInsets.bottom))
                 print("chatTable contentOffset y before keyboard: \(self.chatTable.contentOffset.y)")
-                self.chatTable.contentOffset.y = ((self.chatTable.contentOffset.y - keyboardHeight) + (view.safeAreaInsets.bottom))
+                UIView.animate(withDuration: 0.2) {
+                    self.chatTable.contentOffset.y = ((self.chatTable.contentOffset.y - self.keyboardHeight) + (self.view.safeAreaInsets.bottom))
+//                    self.view.layer.setNeedsLayout() //not this why ??
+                    self.view.layoutIfNeeded()
+                }
                 print("chatTable contentOffset y after keyboard: \(self.chatTable.contentOffset.y)")
                 print("message input view height at keyboard: \(messageInputView.frame.height)")
                 print("keyboard height at keyboard: \(keyboardHeight)")
