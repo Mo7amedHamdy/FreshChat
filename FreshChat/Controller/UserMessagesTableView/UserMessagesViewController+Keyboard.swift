@@ -19,7 +19,6 @@ extension UserMessagesViewController {
             //for reversed table...
             if !isScroll {
                 UIView.animate(withDuration: 0.2) {
-                    print("keyboard will show 88888888999999999")
                     let contentInset = UIEdgeInsets(top: (self.keyboardHeight - self.view.safeAreaInsets.bottom) + 5, left: 0, bottom: 0, right: 0)
                     self.chatTable.contentInset = contentInset
                     self.chatTable.verticalScrollIndicatorInsets = contentInset
