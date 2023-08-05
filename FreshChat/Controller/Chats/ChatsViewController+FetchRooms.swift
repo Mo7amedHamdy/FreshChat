@@ -15,7 +15,6 @@ extension ChatsViewController {
     func fetchchatRoomsWithListener() {
         guard let currentUserEmail = Auth.auth().currentUser?.email else { return }
         chatRoomslistener = db.collection("users").document(currentUserEmail).collection("chatRooms").order(by: "lastMessageSendTime", descending: true).addSnapshotListener { querySnapshot, error in
-//            self.rooms = []
             if let error2 = error {
                 print(error2.localizedDescription)
             }
@@ -125,7 +124,9 @@ extension ChatsViewController {
                                 cell?.timeLabel.text = self.configureDateFormat(room.lastMessageTime)
                                 self.checkLastMessageState(for: room, with: indexPath)
                                 
-                                //TODO like message receiver
+                                //Mark:- note that delete message update at viewDidLoad()
+                                //here cases of message added or no message added or deleted
+                                
                                 if self.rooms[indexPath.row].lastMessageTime != room.lastMessageTime {
                                     //add new message
                                     if self.rooms[indexPath.row].lastMessageTime < room.lastMessageTime {
@@ -144,20 +145,6 @@ extension ChatsViewController {
                                             self.rooms[indexPath.row] = room
                                         }
                                     }
-                                    //delete message
-//                                    else if self.rooms[indexPath.row].lastMessageTime > room.lastMessageTime {
-////                                        if self.rooms.count > 1 {
-//                                            for i in 0..<self.rooms.count {
-//                                                if self.rooms[i].lastMessageTime < room.lastMessageTime {
-//                                                    self.rooms.remove(at: indexPath.row)
-//                                                    self.rooms.insert(room, at: i - 1)
-//                                                    self.chatsTableView.moveRow(at: indexPath, to: IndexPath(row: i - 1, section: 0))
-//                                                    break
-//                                                }
-//                                            }
-//                                            self.rooms[indexPath.row] = room
-////                                        }
-//                                    }
                                 }
                                 //no change in last message .. no add or delete message
                                 else {
@@ -199,7 +186,7 @@ extension ChatsViewController {
                                 }
                                 
                                 else {
-                                    //cancel bold font
+                                    //messages state is seen
                                     let cell = self.chatsTableView.cellForRow(at: indexPath) as? ChatRoomCell
                                     
                                     if self.rooms[indexPath.row].lastMessageTime != room.lastMessageTime {
@@ -222,21 +209,6 @@ extension ChatsViewController {
                                                 }
                                             }
                                         }
-                                        
-                                        //delete message
-//                                        else if self.rooms[indexPath.row].lastMessageTime > room.lastMessageTime {
-//                                            if self.rooms.count > 1 {
-//                                            for i in 0..<self.rooms.count {
-//                                                if self.rooms[i].lastMessageTime < room.lastMessageTime {
-//                                                    self.rooms.remove(at: indexPath.row)
-//                                                    self.rooms.insert(room, at: i - 1)
-//                                                    self.chatsTableView.moveRow(at: indexPath, to: IndexPath(row: i - 1, section: 0))
-//                                                    break
-//                                                }
-//                                            }
-//                                            self.rooms[indexPath.row] = room
-//                                            }
-//                                        }
                                     }
                                     else {
 //                                        cell?.lastMessageLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
