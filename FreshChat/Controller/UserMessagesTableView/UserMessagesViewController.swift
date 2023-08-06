@@ -10,7 +10,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
 
-struct NotificationData {
+struct NotificationData {  //test no need to this ??
     var messageId: String
     var messageBody: String
     var sendTime: TimeInterval
@@ -103,8 +103,6 @@ class UserMessagesViewController: UIViewController {
     //Mark:- view did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
                 
         print("viewDidLoad is initialized successfully ppppppppppppppppppp")
         
@@ -114,11 +112,13 @@ class UserMessagesViewController: UIViewController {
             }
         }
         
+        //initial message input view
         messageInputView = Bundle.main.loadNibNamed("InputTest", owner: nil)?.first as? InputTest
                 
+        
+        //navigation item appearance
         navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
        
-        //navigation item appearance
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .systemBackground
@@ -192,17 +192,7 @@ class UserMessagesViewController: UIViewController {
     //Mark:- viewWillAppear
     override func viewWillAppear(_ animated: Bool)  {
         super.viewWillAppear(animated)
-        
         getCurrentUserData()
-        
-        //check conversation and chat rooms is found
-//        if groupedMessages.isEmpty {
-//            queryInConversationsForCurrentUser()
-//            queryInConversationsForOtherUser()
-//        }
-//        else {
-//            queryInConversationsForOtherUser()
-//        }
     }
     
     
@@ -287,8 +277,8 @@ class UserMessagesViewController: UIViewController {
         //update delivered messages to seen when open app without action with notification
         if deliveredMessagesCount > 0 {
             let chatRoomIdOU = "\(otherUser.email)_\(currentUserEmail)"
-            getAlldeliveredNotifications(user: otherUser, RoomId: chatRoomIdOU) { documents in
-                self.updateDeliveredMessagesToSeen(for: documents, with: chatRoomIdOU)
+            getAllUnSeenNotifications(user: otherUser, RoomId: chatRoomIdOU) { documents in
+                self.updateUnSeenMessagesToSeen(for: documents, with: chatRoomIdOU)
             }
             deliveredMessagesCount = 0
         }
@@ -371,14 +361,14 @@ class UserMessagesViewController: UIViewController {
         }
     }
     
-    
+    //change notification count to zero after seeing messages
     func changeNotificationCount() {
         UserDefaults(suiteName: "group.mohamed.FreshChat")?.set(1, forKey: "count")
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
     
     //get all delivered notifications data
-    func getAlldeliveredNotifications(user: User, RoomId: String, completion: @escaping ([QueryDocumentSnapshot])->Void) {
+    func getAllUnSeenNotifications(user: User, RoomId: String, completion: @escaping ([QueryDocumentSnapshot])->Void) {
         let query = self.db.collection("users").document(user.email).collection("chatRooms").document(RoomId).collection("roomMessages").whereField("messageState", isNotEqualTo: "seen")
         query.getDocuments(source: .server) { snapshot, error in
             if let error2 = error {
@@ -393,7 +383,7 @@ class UserMessagesViewController: UIViewController {
 
     
     //update all delivered messages to seen
-    func updateDeliveredMessagesToSeen(for docs: [QueryDocumentSnapshot], with roomId: String) {
+    func updateUnSeenMessagesToSeen(for docs: [QueryDocumentSnapshot], with roomId: String) {
         for doc in docs {
             db.collection("users").document(otherUser.email).collection("chatRooms").document(roomId).collection("roomMessages").document(doc.documentID).updateData(["messageState": "seen"])
         }
@@ -419,7 +409,7 @@ class UserMessagesViewController: UIViewController {
     }
     
     
-    //Mark:- correct the content offset
+    //Mark:- correct the content offset in case normal table view not reversed
 //    func scrollToBottom()  {
 //        let point = CGPoint(x: 0, y: self.chatTable.contentSize.height + self.chatTable.contentInset.bottom - self.chatTable.frame.height)
 //        if chatTable.contentOffset.y != point.y {
