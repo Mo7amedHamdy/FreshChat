@@ -225,10 +225,11 @@ extension SettingsCollectionViewController {
                 self.signoutActionSheet()
             }
         }
-        
-        collectionView.deselectItem(at: indexPath, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
+            self.collectionView.deselectItem(at: indexPath, animated: true)
+        }
     }
-    
+   
     //prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let des = segue.destination as? EditPersonalInfoTableViewController {
