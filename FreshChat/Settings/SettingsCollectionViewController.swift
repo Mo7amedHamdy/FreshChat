@@ -225,9 +225,9 @@ extension SettingsCollectionViewController {
                 self.signoutActionSheet()
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
             self.collectionView.deselectItem(at: indexPath, animated: true)
-        }
+//        }
     }
    
     //prepare for segue

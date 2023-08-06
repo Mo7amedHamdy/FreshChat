@@ -53,11 +53,9 @@
 		6079AB5E2A52BE0700D87BC6 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6079AB5D2A52BE0700D87BC6 /* Empty.xib */; };
 		6079AB602A52BE5C00D87BC6 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6079AB5F2A52BE5C00D87BC6 /* EmptyTableViewCell.swift */; };
 		608321D52A75084D0092EB1C /* ChatsViewController+FetchRooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608321D42A75084D0092EB1C /* ChatsViewController+FetchRooms.swift */; };
-		6087AE5A2A62B32400A483C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6087AE592A62B32400A483C5 /* GoogleService-Info.plist */; };
 		608C4EAE2910551D0095957E /* UsersMailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 608C4EAD2910551D0095957E /* UsersMailCell.xib */; };
 		608C4EB0291055450095957E /* UsersMailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608C4EAF291055450095957E /* UsersMailCell.swift */; };
 		6093FC1229C27ED800387BD7 /* CustomDeleteToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6093FC1129C27ED800387BD7 /* CustomDeleteToolbar.swift */; };
-		609D8841289048A9003217AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 609D8840289048A9003217AB /* GoogleService-Info.plist */; };
 		609D8844289052C8003217AB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 609D8843289052C8003217AB /* FirebaseAuth */; };
 		609D8846289052C8003217AB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 609D8845289052C8003217AB /* FirebaseFirestore */; };
 		60A22AD728911A1300E955B9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A22AD628911A1300E955B9 /* SignInViewController.swift */; };
@@ -82,6 +80,8 @@
 		60DEF7AD2A4EF14D00A216F3 /* ProfilePicEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DEF7AC2A4EF14D00A216F3 /* ProfilePicEditTableViewCell.swift */; };
 		60DEF7AF2A4EF17700A216F3 /* ProfileNameEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DEF7AE2A4EF17700A216F3 /* ProfileNameEdit.xib */; };
 		60DEF7B12A4EF19B00A216F3 /* ProfileNameEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DEF7B02A4EF19B00A216F3 /* ProfileNameEditTableViewCell.swift */; };
+		60F25EFE2A7FC49700C4E405 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60F25EFD2A7FC49700C4E405 /* GoogleService-Info.plist */; };
+		60F25F002A7FC4A600C4E405 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60F25EFF2A7FC4A600C4E405 /* GoogleService-Info.plist */; };
 		60F4CA9F2A583DD90046BCF6 /* UnReadMessageText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F4CA9E2A583DD90046BCF6 /* UnReadMessageText.xib */; };
 		60F4CAA12A583E520046BCF6 /* UnReadMessageTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F4CAA02A583E520046BCF6 /* UnReadMessageTextTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -158,11 +158,9 @@
 		6079AB5D2A52BE0700D87BC6 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
 		6079AB5F2A52BE5C00D87BC6 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		608321D42A75084D0092EB1C /* ChatsViewController+FetchRooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatsViewController+FetchRooms.swift"; sourceTree = "<group>"; };
-		6087AE592A62B32400A483C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		608C4EAD2910551D0095957E /* UsersMailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersMailCell.xib; sourceTree = "<group>"; };
 		608C4EAF291055450095957E /* UsersMailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMailCell.swift; sourceTree = "<group>"; };
 		6093FC1129C27ED800387BD7 /* CustomDeleteToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDeleteToolbar.swift; sourceTree = "<group>"; };
-		609D8840289048A9003217AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		60A22AD628911A1300E955B9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		60A22AD82891276800E955B9 /* UserMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessagesViewController.swift; sourceTree = "<group>"; };
 		60B332522A5C0883008131B2 /* MessageCell2WithCheckMark.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell2WithCheckMark.xib; sourceTree = "<group>"; };
@@ -182,6 +180,8 @@
 		60DEF7AC2A4EF14D00A216F3 /* ProfilePicEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicEditTableViewCell.swift; sourceTree = "<group>"; };
 		60DEF7AE2A4EF17700A216F3 /* ProfileNameEdit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileNameEdit.xib; sourceTree = "<group>"; };
 		60DEF7B02A4EF19B00A216F3 /* ProfileNameEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameEditTableViewCell.swift; sourceTree = "<group>"; };
+		60F25EFD2A7FC49700C4E405 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		60F25EFF2A7FC4A600C4E405 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		60F4CA9E2A583DD90046BCF6 /* UnReadMessageText.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnReadMessageText.xib; sourceTree = "<group>"; };
 		60F4CAA02A583E520046BCF6 /* UnReadMessageTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnReadMessageTextTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,8 +272,8 @@
 			children = (
 				601F7CBA2A40999000CF83E9 /* NotificationServiceExtension.entitlements */,
 				601F7CB02A4098AE00CF83E9 /* NotificationService.swift */,
-				6087AE592A62B32400A483C5 /* GoogleService-Info.plist */,
 				601F7CB22A4098AE00CF83E9 /* Info.plist */,
+				60F25EFF2A7FC4A600C4E405 /* GoogleService-Info.plist */,
 			);
 			path = NotificationServiceExtension;
 			sourceTree = "<group>";
@@ -349,7 +349,7 @@
 				6069D13928903DF000DE3848 /* Assets.xcassets */,
 				6069D13B28903DF000DE3848 /* LaunchScreen.storyboard */,
 				6069D13E28903DF000DE3848 /* Info.plist */,
-				609D8840289048A9003217AB /* GoogleService-Info.plist */,
+				60F25EFD2A7FC49700C4E405 /* GoogleService-Info.plist */,
 				6069D13628903DEF00DE3848 /* FreshChat.xcdatamodeld */,
 				606E01BB2897C6D80096313F /* ChatBubble.swift */,
 			);
@@ -485,7 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6087AE5A2A62B32400A483C5 /* GoogleService-Info.plist in Resources */,
+				60F25F002A7FC4A600C4E405 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +502,7 @@
 				60DEF7AB2A4EF11A00A216F3 /* ProfilePicEdit.xib in Resources */,
 				60010C382892CFA50077A3FD /* MessageCell.xib in Resources */,
 				604CAA6E298AD20400EE1FC2 /* MessageCell2.xib in Resources */,
-				609D8841289048A9003217AB /* GoogleService-Info.plist in Resources */,
+				60F25EFE2A7FC49700C4E405 /* GoogleService-Info.plist in Resources */,
 				60B332552A5C0A37008131B2 /* MessageCellWithCheckMark.xib in Resources */,
 				6069D13A28903DF000DE3848 /* Assets.xcassets in Resources */,
 				6044188428C78456009489F5 /* InputTest.xib in Resources */,
