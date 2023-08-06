@@ -910,7 +910,8 @@ extension UserMessagesViewController {
                       "otherUserLastName": self.otherUser.lastName,
                       "messageId": lastMessage.messageId,
                       "messageState": "sent",
-                      "deliveredMessagesCount": 0])
+                      "deliveredMessagesCount": 0,
+                      "present": "true"])
     }
     
     func configureChatRoomForOtherUser(lastMessage: Message, deliveredMessagesCount: Int) {
@@ -929,7 +930,8 @@ extension UserMessagesViewController {
                       "otherUserLastName": self.currentUser.lastName,
                       "messageId": lastMessage.messageId,
                       "messageState": "",
-                      "deliveredMessagesCount": deliveredMessagesCount])
+                      "deliveredMessagesCount": deliveredMessagesCount,
+                      "present": "false"])
         
     }
     

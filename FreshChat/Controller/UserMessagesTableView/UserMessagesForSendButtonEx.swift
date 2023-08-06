@@ -30,8 +30,6 @@ extension UserMessagesViewController: SendData {
                     self.chatTable.reloadRows(at: [indexPath], with: .none)
                 }
             }
-            
-            //TODO redraw the cell before indexForEdit
         }
         
         isModified = false  //temporary think to handle this with doc added
@@ -125,8 +123,6 @@ extension UserMessagesViewController: SendData {
                     if self.groupedMessages.count == 1 {
                         self.loadMessagesFromFirestoreWithListener()
                     }
-                    
-                    //TODO update message status here ??
                 }
             }
             updateChatRoomForCurrentUser(lastMessage: lastMessageV, state: "sent")
@@ -281,7 +277,7 @@ extension UserMessagesViewController: SendData {
                     if data.isEmpty {
                         print("there is no conversation with this name")
                         self.chatRoomOtherUserIsFound = false
-                        self.configureChatRoomForOtherUser(lastMessage: lastMessage, deliveredMessagesCount: 1)
+                        self.configureChatRoomForOtherUser(lastMessage: lastMessage, deliveredMessagesCount: 0)
                     }
                     else {
                         print("there is conversation with this name")
