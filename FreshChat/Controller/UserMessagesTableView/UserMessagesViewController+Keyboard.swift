@@ -30,10 +30,10 @@ extension UserMessagesViewController {
                 //for reversed table .. you should care that content offset y is minus
 //                self.chatTable.contentOffset.y = ((self.chatTable.contentOffset.y - keyboardHeight) + (messageInputView.frame.height + view.safeAreaInsets.bottom))
                 self.chatTable.contentOffset.y = ((self.chatTable.contentOffset.y - self.keyboardHeight) + (self.view.safeAreaInsets.bottom))
-                UIView.animate(withDuration: 0.4) {
+//                UIView.animate(withDuration: 0.4) {
 //                    self.view.layer.setNeedsLayout() //not this why ??
-                    self.view.layoutIfNeeded()
-                }
+                self.view.layer.layoutIfNeeded()
+//                }
                 
                    //here like start app you shoud get content offset from this equation
                   //to get the exact content offset.y (not in reversed table)
