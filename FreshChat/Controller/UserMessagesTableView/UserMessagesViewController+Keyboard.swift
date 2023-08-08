@@ -18,7 +18,7 @@ extension UserMessagesViewController {
 //            let contentInset = UIEdgeInsets(top: 0, left: 0, bottom:(keyboardHeight - view.safeAreaInsets.bottom) + 5, right: 0)
             //for reversed table...
             if !isScroll {
-//                UIView.animate(withDuration: 0.2) {
+//                UIView.animate(withDuration: 0.4) {
                     let contentInset = UIEdgeInsets(top: (self.keyboardHeight - self.view.safeAreaInsets.bottom) + 5, left: 0, bottom: 0, right: 0)
                     self.chatTable.contentInset = contentInset
                     self.chatTable.verticalScrollIndicatorInsets = contentInset
@@ -29,15 +29,11 @@ extension UserMessagesViewController {
             if  keyboardHeight > 200 && isChangingFrame == false {
                 //for reversed table .. you should care that content offset y is minus
 //                self.chatTable.contentOffset.y = ((self.chatTable.contentOffset.y - keyboardHeight) + (messageInputView.frame.height + view.safeAreaInsets.bottom))
-                print("chatTable contentOffset y before keyboard: \(self.chatTable.contentOffset.y)")
                 self.chatTable.contentOffset.y = ((self.chatTable.contentOffset.y - self.keyboardHeight) + (self.view.safeAreaInsets.bottom))
                 UIView.animate(withDuration: 0.4) {
 //                    self.view.layer.setNeedsLayout() //not this why ??
                     self.view.layoutIfNeeded()
                 }
-                print("chatTable contentOffset y after keyboard: \(self.chatTable.contentOffset.y)")
-                print("message input view height at keyboard: \(messageInputView.frame.height)")
-                print("keyboard height at keyboard: \(keyboardHeight)")
                 
                    //here like start app you shoud get content offset from this equation
                   //to get the exact content offset.y (not in reversed table)
@@ -74,7 +70,7 @@ extension UserMessagesViewController {
             if isChangingFrame {
                 //for reversed table
                 self.chatTable.contentOffset.y = -(keyboardHeight - view.safeAreaInsets.bottom + 5)
-                
+               
                 //TODO think to do content inset here and vertical scroll indicator ??
             }
         }
@@ -86,7 +82,12 @@ extension UserMessagesViewController {
                 //Mark:- at hide keyboard:  messageInputView.frame.height = inputAreaHeight + safeAreaInset.bottom
 //                self.chatTable.contentOffset.y = (self.chatTable.contentOffset.y - self.keyboardHeight) + (self.messageInputView.frame.height)
                 //for reversed table .. you should care content offset y is minus
-                self.chatTable.contentOffset.y = (self.chatTable.contentOffset.y + self.keyboardHeight) - (self.messageInputView.frame.height)
+//                self.chatTable.contentOffset.y = (self.chatTable.contentOffset.y + self.keyboardHeight) - (self.messageInputView.frame.height)
+                
+                let contentInset = UIEdgeInsets(top: (messageInputView.frame.height - view.safeAreaInsets.bottom) + 5, left: 0, bottom: 0, right: 0)
+                self.chatTable.contentInset = contentInset
+                self.chatTable.verticalScrollIndicatorInsets = contentInset
+                self.view.layer.setNeedsLayout()
             }
             else {
 //                let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: (messageInputView.frame.height - view.safeAreaInsets.bottom) + 5, right: 0)

@@ -251,7 +251,7 @@ class UserMessagesViewController: UIViewController {
         //lisner for state online or offline
         fetchOtherUserState()
         
-        //Func()
+        //Func()  .. test no need to this
         //update message state after notifications
 //        if !notificationMessages.isEmpty {
 //            let chatRoomIdOU = "\(otherUser.email)_\(currentUserEmail)"
