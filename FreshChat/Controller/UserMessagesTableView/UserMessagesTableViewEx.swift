@@ -18,117 +18,12 @@ extension UserMessagesViewController: UITableViewDataSource, UITableViewDelegate
     
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 25
+        return 40
     }
     
     //view for footer
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        
-        //unread messages footer .. notifications pressed
-//        if isPushingBackgroundNotificationToApp {
-//            print("footer 11111111111")
-//            if  section == 0 && groupedMessages[section].date == groupedMessages[1].date {
-//                let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader2")
-//                //to remove the visual effect of footer
-//                var backgroundConfig = UIBackgroundConfiguration.listGroupedHeaderFooter()
-//                backgroundConfig.visualEffect = nil //coooooool🥳🥳
-//                backgroundConfig.backgroundColor = #colorLiteral(red: 0.8493412137, green: 0.9706042409, blue: 0.939610064, alpha: 1)
-//                footer?.backgroundConfiguration = backgroundConfig
-//                var content = footer?.defaultContentConfiguration()
-//                content?.text = "UnReadMessages"
-//                content?.textProperties.alignment = .center
-//                content?.textProperties.color = #colorLiteral(red: 0.1999999881, green: 0.1999999881, blue: 0.1999999881, alpha: 1)
-//                content?.textProperties.font = UIFont.systemFont(ofSize: 13, weight: .medium)
-//                footer?.contentConfiguration = content
-//                //for reversed table
-//                footer?.transform = CGAffineTransform(scaleX: 1, y: -1)
-//                dateFooter = footer
-//            }
-//
-//            //new notification with new date .. (new section)
-//            else if section == 1 && self.groupedMessages[section].messages == [] {
-//                print("footer 22222222222222")
-//                let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! CustomHeader
-//                //to remove the visual effect of footer
-//                var backgroundConfig = UIBackgroundConfiguration.listGroupedHeaderFooter()
-//                backgroundConfig.visualEffect = nil //coooooool🥳🥳
-//                footer.backgroundConfiguration = backgroundConfig
-//                let messageTime = groupedMessages[0].messages[0].sendTime
-//                let headerDateString = configureDateFormatForHeader(messageTime)
-//                footer.dateLabel.text = headerDateString
-//                //for reversed table
-//                footer.transform = CGAffineTransform(scaleX: 1, y: -1)
-//                dateFooter = footer
-//            }
-//            //footer date .. fetch data normally
-//            else {
-//                print("footer 5555555555555")
-//                let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! CustomHeader
-//                //to remove the visual effect of footer
-//                var backgroundConfig = UIBackgroundConfiguration.listGroupedHeaderFooter()
-//                backgroundConfig.visualEffect = nil //coooooool🥳🥳
-//                footer.backgroundConfiguration = backgroundConfig
-//                let messageTime = groupedMessages[section].messages[0].sendTime
-//                let headerDateString = configureDateFormatForHeader(messageTime)
-//                footer.dateLabel.text = headerDateString
-//                //for reversed table
-//                footer.transform = CGAffineTransform(scaleX: 1, y: -1)
-//                dateFooter = footer
-//            }
-//        }
-        
-//        else if deliveredMessagesState == true {
-//            print("footer 99999999900000")
-//            if section == 0 && groupedMessages[section].date == groupedMessages[1].date {
-//                print("footer 3333333333333")
-//                let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader2")
-//                //to remove the visual effect of footer
-//                var backgroundConfig = UIBackgroundConfiguration.listGroupedHeaderFooter()
-//                backgroundConfig.visualEffect = nil //coooooool🥳🥳
-//                backgroundConfig.backgroundColor = #colorLiteral(red: 0.8493412137, green: 0.9706042409, blue: 0.939610064, alpha: 1)
-//                footer?.backgroundConfiguration = backgroundConfig
-//                var content = footer?.defaultContentConfiguration()
-//                content?.text = "UnReadMessages"
-//                content?.textProperties.alignment = .center
-//                content?.textProperties.color = #colorLiteral(red: 0.1999999881, green: 0.1999999881, blue: 0.1999999881, alpha: 1)
-//                content?.textProperties.font = UIFont.systemFont(ofSize: 13, weight: .medium)
-//                footer?.contentConfiguration = content
-//                //for reversed table
-//                footer?.transform = CGAffineTransform(scaleX: 1, y: -1)
-//                dateFooter = footer
-//            }
-//            else if section == 1 && self.groupedMessages[section].messages == [] {
-//                print("footer 4444444444")
-//                let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! CustomHeader
-//                //to remove the visual effect of footer
-//                var backgroundConfig = UIBackgroundConfiguration.listGroupedHeaderFooter()
-//                backgroundConfig.visualEffect = nil //coooooool🥳🥳
-//                footer.backgroundConfiguration = backgroundConfig
-//                let messageTime = groupedMessages[0].messages[0].sendTime
-//                let headerDateString = configureDateFormatForHeader(messageTime)
-//                footer.dateLabel.text = headerDateString
-//                //for reversed table
-//                footer.transform = CGAffineTransform(scaleX: 1, y: -1)
-//                dateFooter = footer
-//            }
-//            //footer date .. fetch data normally
-//            else {
-//                print("footer 6666666666")
-//                let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! CustomHeader
-//                //to remove the visual effect of footer
-//                var backgroundConfig = UIBackgroundConfiguration.listGroupedHeaderFooter()
-//                backgroundConfig.visualEffect = nil //coooooool🥳🥳
-//                footer.backgroundConfiguration = backgroundConfig
-//                let messageTime = groupedMessages[section].messages[0].sendTime
-//                let headerDateString = configureDateFormatForHeader(messageTime)
-//                footer.dateLabel.text = headerDateString
-//                //for reversed table
-//                footer.transform = CGAffineTransform(scaleX: 1, y: -1)
-//                dateFooter = footer
-//            }
-//        }
-        
-        //footer date .. fetch data normally
+
         let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! CustomHeader
         //to remove the visual effect of footer
         var backgroundConfig = UIBackgroundConfiguration.listGroupedHeaderFooter()
