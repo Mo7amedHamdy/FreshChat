@@ -230,6 +230,12 @@ extension UserMessagesViewController: ToolBarButtons {
                     self.chatTable.endUpdates()
                 }
                 self.chatTable.allowsMultipleSelectionDuringEditing = true
+                DispatchQueue.main.async {
+                    UIView.animate(withDuration: 1) {
+                        self.messageInputView.textView.resignFirstResponder()
+                        self.view.layer.setNeedsLayout()
+                    }
+                }
                 self.chatTable.setEditing(true, animated: true)
                 self.chatTable.selectRow(at: indexPath, animated: true, scrollPosition: .none)
                 self.deletToolbar.selectedRowscountLabel.text = "\((self.chatTable.indexPathsForSelectedRows?.count)!)"
