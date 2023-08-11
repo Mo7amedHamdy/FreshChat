@@ -707,26 +707,28 @@ extension UserMessagesViewController {
     
     //add new row or section for send message
     func insertNewRowOrSectionForSend() {
-        self.chatTable.performBatchUpdates {
-            if self.groupedMessages.first?.messages.count == 1 {
+        if self.groupedMessages.first?.messages.count == 1 {
+            self.chatTable.performBatchUpdates {
                 //add new section
                 let indexSet = IndexSet(arrayLiteral: 0)
                 self.chatTable.insertSections(indexSet, with: .top)
             }
-            //add new row
-            self.chatTable.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
-            print("row is inserted successfully! 90909090")
         }
-        //redraw the previous cell without tail
-        let indexPath = IndexPath(row: 1, section: 0)
-        let indexPath2 = IndexPath(row: 0, section: 0)
-        if self.groupedMessages[indexPath.section].messages.count > 1 { //not excute when inserting new section with one message
-            let cell = self.chatTable.cellForRow(at: indexPath) as? MessageCell
-            let message = self.groupedMessages[indexPath.section].messages[indexPath.row]
-            cell?.messageBubbleView.checkMessageSender(message: message, drawWithTail: false)
-            if self.groupedMessages[indexPath2.section].messages[indexPath2.row].sender == message.sender {
-                cell?.messageBubbleView.setNeedsDisplay()
-                print("uuuuuuuuuuuu")
+        else {
+            self.chatTable.performBatchUpdates {
+                //add new row
+                self.chatTable.insertRows(at: [IndexPath(row: 0, section: 0)], with: .top)
+            }
+            //redraw the previous cell without tail
+            let indexPath = IndexPath(row: 1, section: 0)
+            let indexPath2 = IndexPath(row: 0, section: 0)
+            if self.groupedMessages[indexPath.section].messages.count > 1 { //not excute when inserting new section with one message
+                let cell = self.chatTable.cellForRow(at: indexPath) as? MessageCell
+                let message = self.groupedMessages[indexPath.section].messages[indexPath.row]
+                cell?.messageBubbleView.checkMessageSender(message: message, drawWithTail: false)
+                if self.groupedMessages[indexPath2.section].messages[indexPath2.row].sender == message.sender {
+                    cell?.messageBubbleView.setNeedsDisplay()
+                }
             }
         }
     }
