@@ -18,7 +18,7 @@ extension UserMessagesViewController: UITableViewDataSource, UITableViewDelegate
     
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 40
+        return 50
     }
     
     //view for footer

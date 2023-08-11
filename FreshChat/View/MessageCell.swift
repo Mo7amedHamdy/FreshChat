@@ -19,15 +19,6 @@ class MessageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-//        //scale of image symbol
-//        let symbolConfig = UIImage.SymbolConfiguration(scale: .small)
-//        imageViewCheckMark?.contentMode = .scaleAspectFill
-//        imageViewCheckMark?.preferredSymbolConfiguration = symbolConfig
-//
-//        let symbolConfig2 = UIImage.SymbolConfiguration(scale: .small)
-//        imageViewCheckMark2?.contentMode = .bottomRight
-//        imageViewCheckMark2?.preferredSymbolConfiguration = symbolConfig2
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
