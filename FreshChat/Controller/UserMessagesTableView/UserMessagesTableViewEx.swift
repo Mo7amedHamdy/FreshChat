@@ -314,13 +314,13 @@ extension UserMessagesViewController: UITableViewDataSource, UITableViewDelegate
         else {
             //cell1 for other user
             cell.messageBubbleStack.alignment = .leading
-            cell.messageBubbleView.backgroundColor = .systemGray5
+            cell.messageBubbleView.backgroundColor = #colorLiteral(red: 0.8168386221, green: 0.8376844525, blue: 0.837320745, alpha: 0.5)
             cell.messageLabel.textColor = .black
             cell.messageTimeLabel.textColor = .link
             
             //cell2
             cell2.messageBubbleStack.alignment = .leading
-            cell2.messageBubbleView.backgroundColor = .systemGray5
+            cell2.messageBubbleView.backgroundColor = #colorLiteral(red: 0.8168386221, green: 0.8376844525, blue: 0.837320745, alpha: 0.5)
             cell2.messageLabel.textColor = .black
             cell2.messageTimeLabel.textColor = .link
         }
